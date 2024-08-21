@@ -94,7 +94,9 @@ window.signMessage = async function (signMessageParameters) {
 
 window.writeContract = async function (writeContractParameters) {
   try {
-    return await writeContract(config, writeContractParameters)
+    console.log(writeContractParameters.abi);
+    console.log(JSON.parse(writeContractParameters.abi));
+    return await writeContract(config, writeContractParameters.abi)
   } catch (error) {
     console.error("Error writeContract:", error);
     return null;

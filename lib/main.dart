@@ -46,9 +46,9 @@ class _MyAppState extends State<MyApp> {
         await rootBundle.loadString(
           'lib/abi/ERC20.json',
         ),
-      );
+      ) as Map<String, dynamic>;
 
-      abiERC20 = jsonEncode(abiTokenStringJson['abi']);
+      abiERC20 = jsonEncode(abiTokenStringJson);
     });
     super.initState();
   }
